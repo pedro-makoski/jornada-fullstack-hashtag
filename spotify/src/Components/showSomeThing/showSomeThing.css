@@ -1,0 +1,30 @@
+.main__titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__titles h2 {
+    color:white;
+}
+
+.main__titles__link {
+    position: relative;   
+}
+
+.main__titles__link::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0;
+    background-color: white;
+
+    position: absolute;
+    bottom: 1px;
+    z-index: 2;
+    transition: .2s;
+}
+
+.main__titles__link:hover::before {
+    width: 100%;
+}
