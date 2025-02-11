@@ -13,7 +13,7 @@ const Musica = ({obj}) => {
     const [isPause, setIsPause] = useState(false)
     const [play, setPlay] = useState(<FontAwesomeIcon icon={faCirclePlay} className="fa"/>)
     const playButton = useRef(null)
-    const timeStamp = useState('0:00')
+    const timeStamp = useState('1:00')
 
     useEffect(() => {
         if(playButton && playButton.current) {
@@ -56,9 +56,9 @@ const Musica = ({obj}) => {
                         </div>
                         <div className="main--music__infos-time-view">
                             <p>{timeStamp}</p>
-                            <div>
-                                <span className="main--music__infos__total"></span>
-                                <span className="main--music__infos__progress"></span>
+                            <div className="progress-place">
+                                <span className="progress-place__total"></span>
+                                <span className="progress-place__progress"></span>
                             </div>
                             <p>{obj.duration}</p>
                         </div>

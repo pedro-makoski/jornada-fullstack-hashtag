@@ -64,7 +64,13 @@
     justify-content: space-between;
 }
 
-.main--music__infos__total {
+.progress-place {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.progress-place__total {
     display: block;
     height: 7px;
     background-color: gray;
@@ -80,6 +86,17 @@
 
 .main--music__autor-infos {
     width: fit-content;
+}
+
+.progress-place__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: block;
+    height: 7px;
+    border-radius: 8px;
+    width: 15%;
 }
 
 .main--music__autor-infos h2 {
