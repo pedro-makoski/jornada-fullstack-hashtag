@@ -1,0 +1,77 @@
+.mainArtista {
+    margin: 10px 0 0 0;
+    padding: 0;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
+}
+
+.main__header {
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    padding: 30px;
+    position: relative;
+}
+
+.main__header::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 30px);
+    border-radius: 50px 50px 0 0;
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+}
+
+.main__header h2 {
+    font-size: 5rem;
+    position: absolute;
+    bottom: 20px;
+    z-index: 3;
+}
+
+.main__ol {
+    list-style-position: inside;
+}
+
+.main__ol li {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.main__ol li:hover {
+    background-color: var(--green-800);
+}
+
+.main__ol li article {
+    padding: 20px;
+    width: 100%;
+}
+
+.main__ol li article a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.main__ol__li__img-place  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.main__ol__li__img-place img {
+    width: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+    .main__header h2 {
+        font-size: 3rem;
+    }
+}

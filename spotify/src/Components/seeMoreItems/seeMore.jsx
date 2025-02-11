@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../header/header";
-import "../main.css"
+import "../../hubs/main.css"
 import ShowSomeThing from "../showSomeThing/showSomeThing";
 import { MultipleItens } from "../item/item";
 
@@ -13,7 +13,7 @@ export const SeeMore = ({list, borderRadiusImg, whatIsConjunct, whatIsSingular, 
         <>
             <Header />
             <main>
-                <ShowSomeThing title={title} route={"/musics"} Elements={Elements}/>
+                <ShowSomeThing title={title} route={"/musics"} Elements={Elements} showSeeMore={false}/>
             </main>
         </>
     ) 

@@ -11,7 +11,7 @@
 }
 
 .items__item:hover {
-    background-color: var(--green-600);
+    background-color: var(--green-800);
 }
 
 .items__item a {

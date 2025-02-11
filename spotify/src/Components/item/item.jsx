@@ -33,7 +33,7 @@ export function MultipleItens({list, whatIsConjunct, whatIsSingular, sliceQuantL
     return (
         <section className="items">
             {newList.map((element) => (
-                <ElementArtistOrSong imgPath={element.image} title={element.name} route={`${whatIsConjunct}/${element.id}`} subtitle={element.artist} whatIs={whatIsSingular} key={element.id} borderRadiusImg={borderRadiusImg} subtitleStandart={subtitleStandart}/>
+                <ElementArtistOrSong imgPath={element.image} title={element.name} route={`/${whatIsConjunct}/${element.id}`} subtitle={element.artist} whatIs={whatIsSingular} key={element.id} borderRadiusImg={borderRadiusImg} subtitleStandart={subtitleStandart}/>
             ))}
         </section>
     )

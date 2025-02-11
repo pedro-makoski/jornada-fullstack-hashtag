@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./header/header";
+import Header from "../Components/header/header";
 import "./main.css"
-import ShowSomeThing from "./showSomeThing/showSomeThing";
-import { MultipleItens } from "./item/item";
+import ShowSomeThing from "../Components/showSomeThing/showSomeThing";
+import { MultipleItens } from "../Components/item/item";
 import { artistArray } from "../assets/database/artists";
 import {songsArray} from  "../assets/database/songs"
 
@@ -18,8 +18,8 @@ const Home = () => {
         <>
             <Header />
             <main>
-                <ShowSomeThing title={"Artistas populares"} route={"/artists"} Elements={Artistas}/>
-                <ShowSomeThing title={"Musicas populares"} route={"/musics"} Elements={Musicas}/>
+                <ShowSomeThing title={"Artistas populares"} route={"/artists"} Elements={Artistas} showSeeMore={true}/>
+                <ShowSomeThing title={"Musicas populares"} route={"/musics"} Elements={Musicas} showSeeMore={true}/>
             </main>
         </>
     ) 
