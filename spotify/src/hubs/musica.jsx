@@ -38,7 +38,7 @@ const Musica = ({obj}) => {
                 </section>
                 <section className="main-music__infos">
                     <div>
-                        <Link to={`/artistas/${artista[0]["id"]}`}>
+                        <Link to={`/artistas/${artista[0]["id"]}`} className="main-music__infos__link-author">
                             <img src={image} className="main-music__infos__image-author"/>
                         </Link>
                     </div>
