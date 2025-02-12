@@ -1,37 +1,27 @@
 import React, { useEffect, useRef, useState } from "react";
-import Header from "../Components/header/header";
+
 import { searchValuesWithThisValue } from "../utils/searchInList";
 import { artistArray } from "../assets/database/artists";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlay, faBackwardStep, faForwardStep, faCirclePause} from '@fortawesome/free-solid-svg-icons'
 import './musica.css'
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { songsArray } from "../assets/database/songs";
 
-const Musica = ({obj}) => {
+const Musica = () => {
+    const { id } = useParams()
+    const obj = searchValuesWithThisValue(songsArray, parseInt(id), "id")[0]
     const artista = searchValuesWithThisValue(artistArray, obj.artist, "name")
     const image = artista[0]["image"]
     const [isPause, setIsPause] = useState(false)
-    const [play, setPlay] = useState(<FontAwesomeIcon icon={faCirclePlay} className="fa"/>)
-    const playButton = useRef(null)
-    const timeStamp = useState('1:00')
+    const [timeStamp, setTimeStamp] = useState('1:00')
 
-    useEffect(() => {
-        if(playButton && playButton.current) {
-            playButton.current.addEventListener("click", () => {
-                if(isPause) {
-                    setPlay(<FontAwesomeIcon icon={faCirclePlay} className="fa"/>)
-                    setIsPause(false)
-                } else {
-                    setPlay(<FontAwesomeIcon icon={faCirclePause} className="fa"/>)
-                    setIsPause(true)
-                }
-            })
-        }
-    }, [isPause])
+    const togglePlay = () => {
+        setIsPause(prev => !prev)
+    }
 
     return (
         <>
-            <Header />
             <main className="main-music">
                 <section className="main-music--music">
                     <img src={obj.image} />
@@ -47,8 +37,8 @@ const Musica = ({obj}) => {
                             <button className="button-control">
                                 <FontAwesomeIcon icon={faBackwardStep} className="fa"/>
                             </button>
-                            <button className="button-control" ref={playButton}> 
-                                {play}
+                            <button className="button-control" onClick={togglePlay}> 
+                                <FontAwesomeIcon icon={isPause ? faCirclePause : faCirclePlay} className="fa"/>
                             </button>
                             <button className="button-control">
                                 <FontAwesomeIcon icon={faForwardStep} className="fa"/>

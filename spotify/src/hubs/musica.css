@@ -101,7 +101,7 @@
 }
 
 .main--music__autor-infos {
-    width: fit-content;
+    width: 110px;
 }
 
 .progress-place__progress {
@@ -116,11 +116,11 @@
 }
 
 .main--music__autor-infos h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .main--music__autor-infos p {
-    width: fit-content;
+    font-size: 0.8rem;
 }
 
 @media screen and (max-width: 1200px){

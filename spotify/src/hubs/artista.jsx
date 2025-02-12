@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import './artista.css'
 import { songsArray } from "../assets/database/songs";
 import { searchValuesWithThisValue } from "../utils/searchInList";
-import { Link } from "react-router-dom";
-import Header from "../Components/header/header";
+import { Link, useParams } from "react-router-dom"; 
+import { artistArray } from "../assets/database/artists";
 
 const HeaderArtista = ({imgPath, title}) => {
     return (
@@ -45,10 +45,12 @@ const MusicsShowInLineList = ({listMusics, artist, keyName}) => {
 }
 
 
-export const ArtistaPage = ({obj}) => {
+export const ArtistaPage = () => {
+    const { id } = useParams()
+    const obj = searchValuesWithThisValue(artistArray, parseInt(id), "id")[0]
+
     return (
         <>
-            <Header />
             <main className="mainArtista">
                 <HeaderArtista imgPath={obj.banner} title={obj.name}/>
                 <div>

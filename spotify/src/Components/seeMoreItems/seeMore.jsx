@@ -11,7 +11,6 @@ export const SeeMore = ({list, borderRadiusImg, whatIsConjunct, whatIsSingular, 
 
     return (
         <>
-            <Header />
             <main>
                 <ShowSomeThing title={title} route={"/musics"} Elements={Elements} showSeeMore={false}/>
             </main>

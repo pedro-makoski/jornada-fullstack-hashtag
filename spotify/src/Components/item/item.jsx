@@ -16,7 +16,7 @@ export function ElementArtistOrSong({imgPath, title, route, subtitle, whatIs, bo
                 </div>  
                 <div className="item__titles">
                     <h3>{title}</h3>
-                   {subtitle ? <p>{subtitle}</p> : <p>{subtitleStandart}</p>}
+                    <p>{subtitle ?? subtitleStandart}</p>
                 </div>
             </Link>
         </article>

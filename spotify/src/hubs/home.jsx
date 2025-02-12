@@ -1,5 +1,4 @@
-import React from "react";
-import Header from "../Components/header/header";
+import React from "react";  
 import "./main.css"
 import ShowSomeThing from "../Components/showSomeThing/showSomeThing";
 import { MultipleItens } from "../Components/item/item";
@@ -16,7 +15,6 @@ const Musicas = () => {
 const Home = () => {
     return (
         <>
-            <Header />
             <main>
                 <ShowSomeThing title={"Artistas populares"} route={"/artists"} Elements={Artistas} showSeeMore={true}/>
                 <ShowSomeThing title={"Musicas populares"} route={"/musics"} Elements={Musicas} showSeeMore={true}/>
