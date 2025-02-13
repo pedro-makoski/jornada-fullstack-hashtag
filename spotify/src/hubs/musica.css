@@ -149,6 +149,8 @@
     }
 
     .main-music__infos {
+        width: fit-content;
+        margin: auto;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
         grid-auto-rows: min-content;
@@ -194,7 +196,6 @@
     }
 
     .progress-place__total {
-        width: fit-content;
         width: 300px;
     }
 }
@@ -202,5 +203,19 @@
 @media screen and (max-width: 500px){
     .main--music__autor-infos p {
         margin-bottom: 20px;
+    }
+
+    .progress-place__total {
+        width: 50vw;
+    }
+
+    .main-music--music {
+        background-color: transparent;
+    }
+
+    .main-music--music img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
