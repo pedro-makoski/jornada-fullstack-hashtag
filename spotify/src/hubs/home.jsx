@@ -16,8 +16,8 @@ const Home = () => {
     return (
         <>
             <main>
-                <ShowSomeThing title={"artists populares"} route={"/artists"} Elements={artists} showSeeMore={true}/>
-                <ShowSomeThing title={"songs populares"} route={"/musics"} Elements={songs} showSeeMore={true}/>
+                <ShowSomeThing title={"Artistas populares"} route={"/artists"} Elements={artists} showSeeMore={true}/>
+                <ShowSomeThing title={"Musicas populares"} route={"/musics"} Elements={songs} showSeeMore={true}/>
             </main>
         </>
     ) 
