@@ -40,7 +40,6 @@ const MusicsShowInLineList = ({correspondents}) => {
 
     const addView = () => {
         let quantAppearNew = quantAppear+5;
-        console.log(quantAppearNew, correspondents.length)
         if(quantAppearNew === correspondents.length) {
             setSeeMore(false)
         }

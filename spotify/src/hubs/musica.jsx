@@ -1,26 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { searchValuesWithThisValue } from "../utils/searchInList";
 import { artistArray } from "../assets/database/artists";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCirclePlay, faBackwardStep, faForwardStep, faCirclePause} from '@fortawesome/free-solid-svg-icons'
+import { faCirclePlay, faBackwardStep, faForwardStep, faCirclePause, prefix} from '@fortawesome/free-solid-svg-icons'
 import './musica.css'
 import { Link, useParams } from "react-router-dom";
 import { songsArray } from "../assets/database/songs";
 
 const Musica = () => {
     const { id } = useParams()
-    const { image, name, duration, artist } = searchValuesWithThisValue(songsArray, parseInt(id), "id")[0]
+    const { image, name, duration, artist, audio } = searchValuesWithThisValue(songsArray, parseInt(id), "id")[0]
     const currentArtista = searchValuesWithThisValue(artistArray, artist, "name")
     const musicsFromArtista = searchValuesWithThisValue(songsArray, artist, "artist")
     const idArtista = currentArtista[0]["id"]
     const imageArtista = currentArtista[0]["image"]
-    const [isPause, setIsPause] = useState(false)
-    const [timeStamp, setTimeStamp] = useState('1:00')
+    const [isPause, setIsPause] = useState(true)
+    const [timeStamp, setTimeStamp] = useState('00:00')
+
+    const [minutes, seconds] = [parseInt(duration.slice(0, 2)),parseInt(duration.slice(4, 6))]
+    const duratioNumberTotalMinutes = minutes*60+seconds/60
+
+    const audioElement = useRef(null)
 
     const togglePlay = () => {
-        setIsPause(prev => !prev)
+        let isPauseNew = !isPause
+        if(isPauseNew) {
+            audioElement.current.pause()
+        } else {
+            audioElement.current.play()
+        }
+        setIsPause(isPauseNew)
     }
+
+    const progress = useRef(null)
 
     let nextMusic;
     let beforeMusic; 
@@ -41,6 +54,22 @@ const Musica = () => {
     nextMusic = `/songs/${nextMusic}`
     beforeMusic = `/songs/${beforeMusic}`
 
+    useEffect(() => {
+        setIsPause(true)
+    }, [id])
+
+    const timeUpdate = () => {
+        if(audioElement.current && progress.current) {
+            const actualTime = audioElement.current.currentTime;
+            const minutos = Math.floor(actualTime/60)
+            const segundos = Math.floor(actualTime%60)
+
+            setTimeStamp(`${minutos.toString().padStart(2, 0)}:${segundos.toString().padStart(2, 0)}`)
+            const percent = `${(actualTime/duratioNumberTotalMinutes)*100}%`
+            progress.current.style.setProperty("--_progress", percent)
+        }
+    }
+
     return (
         <>
             <main className="main-music">
@@ -59,7 +88,7 @@ const Musica = () => {
                                 <FontAwesomeIcon icon={faBackwardStep} className="fa"/>
                             </Link>
                             <button className="button-control" onClick={togglePlay}> 
-                                <FontAwesomeIcon icon={isPause ? faCirclePause : faCirclePlay} className="fa"/>
+                                <FontAwesomeIcon icon={isPause ? faCirclePlay : faCirclePause} className="fa"/>
                             </button>
                             <Link className="button-control" to={nextMusic}>
                                 <FontAwesomeIcon icon={faForwardStep} className="fa"/>
@@ -69,7 +98,7 @@ const Musica = () => {
                             <p>{timeStamp}</p>
                             <div className="progress-place">
                                 <span className="progress-place__total"></span>
-                                <span className="progress-place__progress"></span>
+                                <span className="progress-place__progress" ref={progress}></span>
                             </div>
                             <p>{duration}</p>
                         </div>
@@ -79,6 +108,7 @@ const Musica = () => {
                         <p>{artist}</p>
                     </div>
                 </section>
+                <audio src={audio} ref={audioElement} onTimeUpdate={timeUpdate}></audio>
             </main>
         </>
     )

@@ -119,6 +119,7 @@
 }
 
 .progress-place__progress {
+    --_progress:0;
     position: absolute;
     top: 0;
     left: 0;
@@ -126,7 +127,7 @@
     display: block;
     height: 7px;
     border-radius: 8px;
-    width: 15%;
+    width: var(--_progress);
 }
 
 .main--music__autor-infos {
