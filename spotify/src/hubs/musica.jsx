@@ -17,6 +17,7 @@ const Musica = () => {
     const imageArtista = currentArtista[0]["image"]
     const [isPause, setIsPause] = useState(true)
     const [timeStamp, setTimeStamp] = useState('00:00')
+    const [percent, setPercent] = useState("0%")
 
     const [minutes, seconds] = [parseInt(duration.slice(0, 2)),parseInt(duration.slice(4, 6))]
     const duratioNumberTotalMinutes = minutes*60+seconds/60
@@ -58,20 +59,33 @@ const Musica = () => {
         setIsPause(true)
         if(audioElement.current) {
             audioElement.current.pause()
+            audioElement.current.currentTime = 0
+        }
+
+        return () => {
+            if(audioElement.current) {
+                audioElement.current.pause()
+                audioElement.current.currentTime = 0
+            }
         }
     }, [id])
 
     const timeUpdate = () => {
         if(audioElement.current && progress.current) {
             const actualTime = audioElement.current.currentTime;
-            const minutos = Math.floor(actualTime/60)
-            const segundos = Math.floor(actualTime%60)
-
-            setTimeStamp(`${minutos.toString().padStart(2, 0)}:${segundos.toString().padStart(2, 0)}`)
-            const percent = `${(actualTime/duratioNumberTotalMinutes)*100}%`
-            progress.current.style.setProperty("--_progress", percent)
+            setPercent(`${(actualTime/duratioNumberTotalMinutes)*100}%`)
         }
     }
+
+    useEffect(() => {
+        const actualTime = audioElement.current.currentTime;
+        const minutos = Math.floor(actualTime/60)
+        const segundos = Math.floor(actualTime%60)
+
+        setTimeStamp(`${minutos.toString().padStart(2, 0)}:${segundos.toString().padStart(2, 0)}`)
+        
+        progress.current.style.setProperty("--_progress", percent)
+    }, [percent])
 
     return (
         <>
