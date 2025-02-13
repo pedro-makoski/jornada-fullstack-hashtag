@@ -116,7 +116,6 @@
     justify-self: right;
     display: flex;
     flex-direction: column;
-    width: 110px;
 }
 
 .progress-place__progress {
@@ -141,6 +140,30 @@
 
 .main--music__autor-infos p {
     font-size: 0.8rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-music--music {
+        height: 50vh;
+    }
+
+    .main-music__infos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-auto-rows: min-content;
+        grid-template-rows: auto;
+    }
+
+    .main--music__autor-infos {
+        display: flex;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+        width: 100%;
+        max-width: 100%;
+        justify-content: flex-start;
+    }
+
 }
 
 @media screen and (max-width: 800px){    
