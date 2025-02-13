@@ -123,7 +123,7 @@ export const songsArray = [
   },
   {
     image: "https://i.scdn.co/image/ab67616d00001e0299ca4be43858f41a3bad9728",
-    name: "2025",
+    name: "02025",
     duration: "02:52",
     artist: "MC Tuto",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/barbie.mp3",
@@ -763,7 +763,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02462239ad51bf390607c6854f",
     name: "Disk Recaída - Ao Vivo",
-    duration: "2:37",
+    duration: "02:37",
     artist: "Murilo Huff",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/peca-intima.mp3",
@@ -772,7 +772,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02e295ee75598a12d933800298",
     name: "Mentirosa - Ao Vivo",
-    duration: "2:45",
+    duration: "02:45",
     artist: "Hugo & Guilherme",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/mentirosa.mp3",
     id: 91,
@@ -780,7 +780,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cff9134ad2ce6516f50e8e31",
     name: "Namora Ela - Ao Vivo",
-    duration: "2:37",
+    duration: "02:37",
     artist: "Hugo & Guilherme",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/mentirosa.mp3",
     id: 92,
@@ -788,7 +788,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cc97936e407973a912dd75cb",
     name: "O Meu Coração Em Suas Mãos (Colgando en tu manos) - Ao Vivo",
-    duration: "3:24",
+    duration: "03:24",
     artist: "Hugo & Guilherme",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/mentirosa.mp3",
     id: 93,
@@ -796,7 +796,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e024c8656adecdb34cdbd119617",
     name: "Pula Fora - Ao Vivo",
-    duration: "2:29",
+    duration: "02:29",
     artist: "Hugo & Guilherme",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/mentirosa.mp3",
     id: 94,
@@ -804,7 +804,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02ca0a5889a7c1110f9654607b",
     name: "1 Minuto - Ao Vivo",
-    duration: "2:38",
+    duration: "02:38",
     artist: "Hugo & Guilherme",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/mentirosa.mp3",
     id: 95,
@@ -812,7 +812,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0278b03b7534ce5a81046d36da",
     name: "Morena De Goiânia - Ao Vivo",
-    duration: "2:46",
+    duration: "02:46",
     artist: "Hugo & Guilherme",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/mentirosa.mp3",
     id: 96,
@@ -820,7 +820,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0278b03b7534ce5a81046d36da",
     name: "Vazou Na Braquiara - Ao Vivo",
-    duration: "2:44",
+    duration: "02:44",
     artist: "Hugo & Guilherme",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/mentirosa.mp3",
     id: 97,
@@ -828,7 +828,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cc97936e407973a912dd75cb",
     name: "Imagina - Ao Vivo",
-    duration: "3:19",
+    duration: "03:19",
     artist: "Hugo & Guilherme",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/mentirosa.mp3",
     id: 98,
@@ -844,7 +844,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02589da421f5679c437c3f6b63",
     name: "Mal Feito - Ao Vivo",
-    duration: "2:57",
+    duration: "02:57",
     artist: "Hugo & Guilherme",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/mentirosa.mp3",
     id: 100,
@@ -852,7 +852,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e023c4401cf203d79e03976be97",
     name: "Malvadinho",
-    duration: "2:00",
+    duration: "02:00",
     artist: "MC LUUKY",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/malvadinho.mp3",
@@ -860,8 +860,8 @@ export const songsArray = [
   },
   {
     image: "https://i.scdn.co/image/ab67616d00001e027bb613913eb23bdea44fe255",
-    name: "300 no 7",
-    duration: "3:15",
+    name: "0300 no 7",
+    duration: "03:15",
     artist: "MC LUUKY",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/malvadinho.mp3",
@@ -879,7 +879,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e023c4401cf203d79e03976be97",
     name: "Nem Ligo Pro Amor",
-    duration: "2:44",
+    duration: "02:44",
     artist: "MC LUUKY",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/malvadinho.mp3",
@@ -888,7 +888,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02ae79921170b53d5ee1a6620f",
     name: "Vou Passar Gelinho",
-    duration: "2:22",
+    duration: "02:22",
     artist: "MC LUUKY",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/malvadinho.mp3",
@@ -942,7 +942,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cadc0764596a80c6fd2c4b8c",
     name: "Cópia Proibida",
-    duration: "2:39",
+    duration: "02:39",
     artist: "Léo Foguete",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/um-palmo.mp3",
     id: 111,
@@ -950,7 +950,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cadc0764596a80c6fd2c4b8c",
     name: "Última Noite - Solo",
-    duration: "2:34",
+    duration: "02:34",
     artist: "Léo Foguete",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/um-palmo.mp3",
     id: 112,
@@ -958,7 +958,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02971d3cfd684cdda409b2fd0e",
     name: "UM PALMO - Ao Vivo",
-    duration: "2:18",
+    duration: "02:18",
     artist: "Léo Foguete",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/um-palmo.mp3",
     id: 113,
@@ -966,7 +966,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0235bc4bc847696d28e2882b16",
     name: "Última Noite",
-    duration: "2:37",
+    duration: "02:37",
     artist: "Léo Foguete",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/um-palmo.mp3",
     id: 114,
@@ -974,7 +974,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02c654c27a61041f4ba5dc228e",
     name: "Sem Você",
-    duration: "2:22",
+    duration: "02:22",
     artist: "Léo Foguete",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/um-palmo.mp3",
     id: 115,
@@ -982,7 +982,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cadc0764596a80c6fd2c4b8c",
     name: "Inconfiável",
-    duration: "2:27",
+    duration: "02:27",
     artist: "Léo Foguete",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/um-palmo.mp3",
     id: 116,
@@ -990,7 +990,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cadc0764596a80c6fd2c4b8c",
     name: "Cabelo de Sol",
-    duration: "2:56",
+    duration: "02:56",
     artist: "Léo Foguete",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/um-palmo.mp3",
     id: 117,
@@ -998,7 +998,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cadc0764596a80c6fd2c4b8c",
     name: "Obrigado Deus",
-    duration: "2:25",
+    duration: "02:25",
     artist: "Léo Foguete",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/um-palmo.mp3",
     id: 118,
@@ -1006,7 +1006,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cadc0764596a80c6fd2c4b8c",
     name: "Morena Avelã",
-    duration: "2:13",
+    duration: "02:13",
     artist: "Léo Foguete",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/um-palmo.mp3",
     id: 119,
@@ -1014,7 +1014,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cadc0764596a80c6fd2c4b8c",
     name: "A Distância Tá Maltratando",
-    duration: "2:40",
+    duration: "02:40",
     artist: "Léo Foguete",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/um-palmo.mp3",
     id: 120,
@@ -1022,7 +1022,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e028fb74b037de7c899f12ed199",
     name: "A Noite (La Notte) - Ao Vivo",
-    duration: "3:21",
+    duration: "03:21",
     artist: "Gusttavo Lima",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/embaixador.mp3",
@@ -1031,7 +1031,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02376d7c9f79569d0a24db5c53",
     name: "Embaixador (Mãe)",
-    duration: "3:07",
+    duration: "03:07",
     artist: "Gusttavo Lima",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/embaixador.mp3",
@@ -1040,7 +1040,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e028fb74b037de7c899f12ed199",
     name: "Morar Nesse Motel",
-    duration: "3:07",
+    duration: "03:07",
     artist: "Gusttavo Lima",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/embaixador.mp3",
@@ -1049,7 +1049,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e025840f88453448723ce907a53",
     name: "Balada - Ao Vivo",
-    duration: "3:21",
+    duration: "03:21",
     artist: "Gusttavo Lima",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/embaixador.mp3",
@@ -1058,7 +1058,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0200fdf13c7847364bc106a640",
     name: "A Noite (feat. Gusttavo Lima)",
-    duration: "2:45",
+    duration: "02:45",
     artist: "Gusttavo Lima",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/embaixador.mp3",
@@ -1067,7 +1067,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0278a62cd11c719962d1d36aba",
     name: "Canudinho - Ao Vivo",
-    duration: "2:04",
+    duration: "02:04",
     artist: "Gusttavo Lima",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/embaixador.mp3",
@@ -1076,7 +1076,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02a028f7cac4c091981f87e669",
     name: "Desejo Imortal (It Must Have Been Love) - Ao Vivo",
-    duration: "3:04",
+    duration: "03:04",
     artist: "Gusttavo Lima",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/embaixador.mp3",
@@ -1085,7 +1085,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0249e34499a2fe0834f879ac18",
     name: "Tocando Em Frente - Ao Vivo",
-    duration: "3:08",
+    duration: "03:08",
     artist: "Gusttavo Lima",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/embaixador.mp3",
@@ -1094,7 +1094,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0278a62cd11c719962d1d36aba",
     name: "Mala dos Porta-Mala - Ao Vivo",
-    duration: "2:33",
+    duration: "02:33",
     artist: "Gusttavo Lima",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/embaixador.mp3",
@@ -1103,7 +1103,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02ab7c9976c44bfbe90f93dbdc",
     name: "Termina Comigo Antes",
-    duration: "3:07",
+    duration: "03:07",
     artist: "Gusttavo Lima",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/embaixador.mp3",
@@ -1112,7 +1112,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0247cbd521916fc422be1a5c9a",
     name: "Fui Mlk",
-    duration: "2:54",
+    duration: "02:54",
     artist: "Nilo",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/fui-mlk.mp3",
     id: 131,
@@ -1120,7 +1120,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02c85fa2e60afc7883d372af4b",
     name: "Pode Me Bloquear",
-    duration: "2:29",
+    duration: "02:29",
     artist: "Nilo",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/fui-mlk.mp3",
     id: 132,
@@ -1136,7 +1136,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0291283a0e9a7c6a329e768c50",
     name: "MTG SEQUELEI - TOPO SESSIONS VOL. 3",
-    duration: "2:08",
+    duration: "02:08",
     artist: "Nilo",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/fui-mlk.mp3",
     id: 134,
@@ -1144,7 +1144,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e023b4601ac40b3bf6208744093",
     name: "Fui Muleque",
-    duration: "2:41",
+    duration: "02:41",
     artist: "Nilo",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/fui-mlk.mp3",
     id: 135,
@@ -1152,7 +1152,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cd79eddeee972fe633a1d70e",
     name: "Whisky Importado",
-    duration: "3:27",
+    duration: "03:27",
     artist: "Nilo",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/fui-mlk.mp3",
     id: 136,
@@ -1160,7 +1160,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02e9a953a49142cb530d6c3fed",
     name: "Eu Nasci Assim",
-    duration: "3:41",
+    duration: "03:41",
     artist: "Nilo",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/fui-mlk.mp3",
     id: 137,
@@ -1176,7 +1176,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0245b867536aed4c0ade37adb3",
     name: "Sorrisin de Puto",
-    duration: "2:17",
+    duration: "02:17",
     artist: "Nilo",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/fui-mlk.mp3",
     id: 139,
@@ -1184,7 +1184,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02ddf45c5c53aec81dc3b18188",
     name: "Mini Saia",
-    duration: "3:30",
+    duration: "03:30",
     artist: "Nilo",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/fui-mlk.mp3",
     id: 140,
@@ -1192,7 +1192,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02971d3cfd684cdda409b2fd0e",
     name: "UM PALMO - Ao Vivo",
-    duration: "2:18",
+    duration: "02:18",
     artist: "Luan Pereira",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/body-splash.mp3",
@@ -1201,7 +1201,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e025149293f9363bf98647d6636",
     name: "Body Splash - Ao Vivo",
-    duration: "2:34",
+    duration: "02:34",
     artist: "Luan Pereira",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/body-splash.mp3",
@@ -1210,7 +1210,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e028918fa0c3cf355061519f67c",
     name: "Saveiro",
-    duration: "2:24",
+    duration: "02:24",
     artist: "Luan Pereira",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/body-splash.mp3",
@@ -1219,7 +1219,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e027793aab53413a2d1c45179b3",
     name: "Wi-Fi - Ao Vivo",
-    duration: "2:41",
+    duration: "02:41",
     artist: "Luan Pereira",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/body-splash.mp3",
@@ -1228,7 +1228,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02971d3cfd684cdda409b2fd0e",
     name: "SOGRA - Ao Vivo",
-    duration: "2:47",
+    duration: "02:47",
     artist: "Luan Pereira",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/body-splash.mp3",
@@ -1237,7 +1237,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02462239ad51bf390607c6854f",
     name: "Aceita Que Ela Tá Comigo - Ao Vivo",
-    duration: "2:33",
+    duration: "02:33",
     artist: "Luan Pereira",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/body-splash.mp3",
@@ -1246,7 +1246,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e024f661bf90b04b29935a931a1",
     name: "FALTA DE QUÊ?",
-    duration: "2:32",
+    duration: "02:32",
     artist: "Luan Pereira",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/body-splash.mp3",
@@ -1255,7 +1255,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02674119092640472d8e59c2c8",
     name: "DE ANTES PRA HOJE",
-    duration: "3:24",
+    duration: "03:24",
     artist: "Luan Pereira",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/body-splash.mp3",
@@ -1264,7 +1264,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02971d3cfd684cdda409b2fd0e",
     name: "FAZENDEIRO - Ao Vivo",
-    duration: "2:11",
+    duration: "02:11",
     artist: "Luan Pereira",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/body-splash.mp3",
@@ -1273,7 +1273,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02f72284893884b5bb83353a3b",
     name: "DEPOIS DO RODEIO",
-    duration: "2:45",
+    duration: "02:45",
     artist: "Luan Pereira",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/body-splash.mp3",
@@ -1282,7 +1282,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0265bf696c1df34686746b73c4",
     name: "Sujeito Homem - Ao Vivo",
-    duration: "2:58",
+    duration: "02:58",
     artist: "Guilherme & Benuto",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/sujeito-homem.mp3",
@@ -1291,7 +1291,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0231f12348a3c599711764f399",
     name: "Fechando o Circo - Ao Vivo",
-    duration: "2:14",
+    duration: "02:14",
     artist: "Guilherme & Benuto",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/sujeito-homem.mp3",
@@ -1300,7 +1300,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0268669c389be5d24e7d22f750",
     name: "Manda um Oi - Ao Vivo",
-    duration: "2:46",
+    duration: "02:46",
     artist: "Guilherme & Benuto",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/sujeito-homem.mp3",
@@ -1309,7 +1309,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e021941a0bf9eab9be2ee17d4b0",
     name: "Chorosa - Ao Vivo",
-    duration: "2:35",
+    duration: "02:35",
     artist: "Guilherme & Benuto",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/sujeito-homem.mp3",
@@ -1318,7 +1318,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02f5b0de3662611ca2985cae11",
     name: "Duas Três",
-    duration: "2:36",
+    duration: "02:36",
     artist: "Guilherme & Benuto",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/sujeito-homem.mp3",
@@ -1327,7 +1327,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02c92447425bf70c686c93c514",
     name: "Haja Colírio (feat. Hugo & Guilherme) - Ao Vivo",
-    duration: "2:53",
+    duration: "02:53",
     artist: "Guilherme & Benuto",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/sujeito-homem.mp3",
@@ -1336,7 +1336,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e021941a0bf9eab9be2ee17d4b0",
     name: "Término Covarde - Ao Vivo",
-    duration: "2:33",
+    duration: "02:33",
     artist: "Guilherme & Benuto",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/sujeito-homem.mp3",
@@ -1345,7 +1345,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0269b7ad43c232770044b8e107",
     name: "Torre Eiffel - Ao Vivo",
-    duration: "3:22",
+    duration: "03:22",
     artist: "Guilherme & Benuto",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/sujeito-homem.mp3",
@@ -1354,7 +1354,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0206592b394c38e8fc7c01ff61",
     name: "Beijo Equivocado",
-    duration: "2:36",
+    duration: "02:36",
     artist: "Guilherme & Benuto",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/sujeito-homem.mp3",
@@ -1363,7 +1363,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02462d242561ae2ceac784fe18",
     name: "Vestido Curto - Ao Vivo",
-    duration: "2:31",
+    duration: "02:31",
     artist: "Guilherme & Benuto",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/sujeito-homem.mp3",
@@ -1372,7 +1372,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02cca35237571dbce12a43fbb4",
     name: "Leão",
-    duration: "2:46",
+    duration: "02:46",
     artist: "Marília Mendonça",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/dois-enganados.mp3",
@@ -1381,7 +1381,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02f780a237b116b5decb468d75",
     name: "Dois Enganados",
-    duration: "2:52",
+    duration: "02:52",
     artist: "Marília Mendonça",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/dois-enganados.mp3",
@@ -1390,7 +1390,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e025eba99fd76c96ae206756326",
     name: "Troca de Calçada",
-    duration: "3:23",
+    duration: "03:23",
     artist: "Marília Mendonça",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/dois-enganados.mp3",
@@ -1399,7 +1399,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e027b4293f65f8fe7003c29279c",
     name: "Infiel - Ao Vivo",
-    duration: "3:21",
+    duration: "03:21",
     artist: "Marília Mendonça",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/dois-enganados.mp3",
@@ -1408,7 +1408,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e027b4293f65f8fe7003c29279c",
     name: "Como Faz Com Ela - Ao Vivo",
-    duration: "2:30",
+    duration: "02:30",
     artist: "Marília Mendonça",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/dois-enganados.mp3",
@@ -1417,7 +1417,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e021e23e8a7efc947b1d7e5836e",
     name: "Supera - Ao Vivo",
-    duration: "2:27",
+    duration: "02:27",
     artist: "Marília Mendonça",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/dois-enganados.mp3",
@@ -1426,7 +1426,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e021e8897179af39a4aaa591be7",
     name: "De Quem É A Culpa?",
-    duration: "3:40",
+    duration: "03:40",
     artist: "Marília Mendonça",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/dois-enganados.mp3",
@@ -1435,7 +1435,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e023e31e22966bafac96b433824",
     name: "Vai Lá Em Casa Hoje - Ao Vivo",
-    duration: "3:11",
+    duration: "03:11",
     artist: "Marília Mendonça",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/dois-enganados.mp3",
@@ -1444,7 +1444,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0292aaf0254618b4de33029ab1",
     name: "Eu Sei de Cor - Ao Vivo",
-    duration: "3:05",
+    duration: "03:05",
     artist: "Marília Mendonça",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/dois-enganados.mp3",
@@ -1453,7 +1453,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e024ed454af2f9a6719f4155241",
     name: "Esqueça-Me Se For Capaz",
-    duration: "2:49",
+    duration: "02:49",
     artist: "Marília Mendonça",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/dois-enganados.mp3",
@@ -1462,7 +1462,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0272f5ede1b025cf73249c83ce",
     name: "PARECE - Ao Vivo",
-    duration: "2:24",
+    duration: "02:24",
     artist: "Luan Santana",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/parece.mp3",
     id: 171,
@@ -1470,7 +1470,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0272f5ede1b025cf73249c83ce",
     name: "CLONE - Ao Vivo",
-    duration: "2:44",
+    duration: "02:44",
     artist: "Luan Santana",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/parece.mp3",
     id: 172,
@@ -1478,7 +1478,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0272f5ede1b025cf73249c83ce",
     name: "CERTEZA - Ao Vivo",
-    duration: "3:08",
+    duration: "03:08",
     artist: "Luan Santana",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/parece.mp3",
     id: 173,
@@ -1486,7 +1486,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0273f044b863be0033982cd767",
     name: "Melação - Ao Vivo",
-    duration: "2:57",
+    duration: "02:57",
     artist: "Luan Santana",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/parece.mp3",
     id: 174,
@@ -1494,7 +1494,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e0282344e9572ebd4236160c6fb",
     name: "EU SOU SENTIMENTO",
-    duration: "3:06",
+    duration: "03:06",
     artist: "Luan Santana",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/parece.mp3",
     id: 175,
@@ -1510,7 +1510,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e021711f153c860d22a47e70893",
     name: "Eu, Você, O Mar e Ela",
-    duration: "3:07",
+    duration: "03:07",
     artist: "Luan Santana",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/parece.mp3",
     id: 177,
@@ -1518,7 +1518,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02e035c09f33e2a896edef4bdb",
     name: "DEJA VU",
-    duration: "3:19",
+    duration: "03:19",
     artist: "Luan Santana",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/parece.mp3",
     id: 178,
@@ -1526,7 +1526,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02845b7e5dfb634d609b154e7a",
     name: "MEIO TERMO - Ao Vivo",
-    duration: "2:55",
+    duration: "02:55",
     artist: "Luan Santana",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/parece.mp3",
     id: 179,
@@ -1534,7 +1534,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02c847c97de21b491fc0daf8b5",
     name: "Chuva de Arroz - Ao Vivo",
-    duration: "3:06",
+    duration: "03:06",
     artist: "Luan Santana",
     audio: "https://jornada-fullstack.s3.us-east-2.amazonaws.com/parece.mp3",
     id: 180,
@@ -1542,7 +1542,7 @@ export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e02d2fc1ee38f06c4c760380925",
     name: "Nada Com Nada - Ao Vivo",
-    duration: "2:41",
+    duration: "02:41",
     artist: "Gustavo Mioto",
     audio:
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/nada-com-nada.mp3",

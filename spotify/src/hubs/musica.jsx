@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { act, useEffect, useRef, useState } from "react";
 
 import { searchValuesWithThisValue } from "../utils/searchInList";
 import { artistArray } from "../assets/database/artists";
@@ -56,6 +56,9 @@ const Musica = () => {
 
     useEffect(() => {
         setIsPause(true)
+        if(audioElement.current) {
+            audioElement.current.pause()
+        }
     }, [id])
 
     const timeUpdate = () => {
