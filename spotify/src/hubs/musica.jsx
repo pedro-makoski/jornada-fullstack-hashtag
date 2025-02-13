@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 
 import { searchValuesWithThisValue } from "../utils/searchInList";
 import { artistArray } from "../assets/database/artists";
@@ -10,9 +10,11 @@ import { songsArray } from "../assets/database/songs";
 
 const Musica = () => {
     const { id } = useParams()
-    const obj = searchValuesWithThisValue(songsArray, parseInt(id), "id")[0]
-    const artista = searchValuesWithThisValue(artistArray, obj.artist, "name")
-    const image = artista[0]["image"]
+    const { image, name, duration, artist } = searchValuesWithThisValue(songsArray, parseInt(id), "id")[0]
+    const currentArtista = searchValuesWithThisValue(artistArray, artist, "name")
+    const musicsFromArtista = searchValuesWithThisValue(songsArray, artist, "artist")
+    const idArtista = currentArtista[0]["id"]
+    const imageArtista = currentArtista[0]["image"]
     const [isPause, setIsPause] = useState(false)
     const [timeStamp, setTimeStamp] = useState('1:00')
 
@@ -20,29 +22,48 @@ const Musica = () => {
         setIsPause(prev => !prev)
     }
 
+    let nextMusic;
+    let beforeMusic; 
+    const idInt = Number(id)
+    const posOfActualMusica = musicsFromArtista.findIndex((element) => element.id === idInt)
+    if(posOfActualMusica === musicsFromArtista.length-1) {
+        nextMusic = idInt-musicsFromArtista.length+1
+    } else {
+        nextMusic = idInt+1
+    }
+
+    if(posOfActualMusica === 0) {
+        beforeMusic = idInt+musicsFromArtista.length-1
+    } else {
+        beforeMusic = idInt-1 
+    }
+    
+    nextMusic = `/songs/${nextMusic}`
+    beforeMusic = `/songs/${beforeMusic}`
+
     return (
         <>
             <main className="main-music">
                 <section className="main-music--music">
-                    <img src={obj.image} />
+                    <img src={image} />
                 </section>
                 <section className="main-music__infos">
-                    <div>
-                        <Link to={`/artistas/${artista[0]["id"]}`} className="main-music__infos__link-author">
-                            <img src={image} className="main-music__infos__image-author"/>
+                    <div className="main-music__infos__autor-for-image">
+                        <Link to={`/artists/${idArtista}`} className="main-music__infos__autor-for-image__link">
+                            <img src={imageArtista} className="main-music__infos__image-author"/>
                         </Link>
                     </div>
                     <div className="main-music__infos__time">
                         <div className="main-music__infos__buttons">
-                            <button className="button-control">
+                            <Link className="button-control" to={beforeMusic}>
                                 <FontAwesomeIcon icon={faBackwardStep} className="fa"/>
-                            </button>
+                            </Link>
                             <button className="button-control" onClick={togglePlay}> 
                                 <FontAwesomeIcon icon={isPause ? faCirclePause : faCirclePlay} className="fa"/>
                             </button>
-                            <button className="button-control">
+                            <Link className="button-control" to={nextMusic}>
                                 <FontAwesomeIcon icon={faForwardStep} className="fa"/>
-                            </button>
+                            </Link>
                         </div>
                         <div className="main--music__infos-time-view">
                             <p>{timeStamp}</p>
@@ -50,12 +71,12 @@ const Musica = () => {
                                 <span className="progress-place__total"></span>
                                 <span className="progress-place__progress"></span>
                             </div>
-                            <p>{obj.duration}</p>
+                            <p>{duration}</p>
                         </div>
                     </div>
                     <div className="main--music__autor-infos">
-                        <h2>{obj.name}</h2>
-                        <p>{obj.artist}</p>
+                        <h2>{name}</h2>
+                        <p>{artist}</p>
                     </div>
                 </section>
             </main>

@@ -3,6 +3,7 @@
     padding: 0;
     border-radius: 30px 30px 0 0;
     overflow: hidden;
+    position: relative;
 }
 
 .main__header {
@@ -31,6 +32,14 @@
     z-index: 3;
 }
 
+.mainArsta__musics {
+    padding: 10px;
+}
+
+.mainArsta__musics h3 {
+    font-size: 2rem;
+}
+
 .main__ol {
     list-style-position: inside;
 }
@@ -39,7 +48,7 @@
     display: flex;
     flex-direction: row;
     border-radius: 20px;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .main__ol li:hover {
@@ -68,6 +77,24 @@
 
 .main__ol__li__img-place img {
     width: 40px;
+}
+
+.main__ol__see-more {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.main__ol__see-more:hover {
+    text-decoration: underline;
+}
+
+.fa-artist{ 
+    color: var(--green-600);
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    font-size: 3rem;
 }
 
 @media screen and (max-width: 1000px) {

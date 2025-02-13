@@ -15,10 +15,10 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='/artists' element={<SeeMore  whatIsConjunct={"artistas"} whatIsSingular={"artista"} borderRadiusImg={"100%"} list={artistArray} title={"Artistas populares"} subtitleStandart={"Artista"}/>} />
-        <Route path='/musics' element={<SeeMore  whatIsConjunct={"musicas"} whatIsSingular={"musica"} borderRadiusImg={"15px"} list={songsArray} title={"Musicas populares"}/>}/>
-        <Route path={`/artistas/:id`} element={<ArtistaPage />}/>
-        <Route path={`/musicas/:id`} element={<Musica />}/>
+        <Route path='/artists' element={<SeeMore  whatIsConjunct={"artists"} whatIsSingular={"artista"} borderRadiusImg={"100%"} list={artistArray} title={"artists populares"} subtitleStandart={"Artista"}/>} />
+        <Route path='/musics' element={<SeeMore  whatIsConjunct={"songs"} whatIsSingular={"musica"} borderRadiusImg={"15px"} list={songsArray} title={"songs populares"}/>}/>
+        <Route path={`/artists/:id`} element={<ArtistaPage />}/>
+        <Route path={`/songs/:id`} element={<Musica />}/>
       </Routes>
     </BrowserRouter>
   )
