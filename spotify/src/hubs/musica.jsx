@@ -8,6 +8,21 @@ import './musica.css'
 import { Link, useParams } from "react-router-dom";
 import { songsArray } from "../assets/database/songs";
 
+const minutesToFormat = (minutes) => {
+    const minutesAbs = Math.Floor(minutes/60)
+    const seconds = Math.floor(minutes % 60)
+
+    return `${minutesAbs.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
+}
+
+const formatToSeconds = (format) => {
+    const [minutes, seconds] = format.toString.split(":")
+    const minutesInt = Number(minutes)
+    const secondsInt = Number(seconds)
+
+    return minutesInt+(secondsInt / 60)
+}
+
 const Musica = () => {
     const { id } = useParams()
     const { image, name, duration, artist, audio } = searchValuesWithThisValue(songsArray, parseInt(id), "id")[0]
@@ -17,10 +32,10 @@ const Musica = () => {
     const imageArtista = currentArtista[0]["image"]
     const [isPause, setIsPause] = useState(true)
     const [timeStamp, setTimeStamp] = useState('00:00')
-    const [percent, setPercent] = useState("0%")
+    // const [percent, setPercent] = useState("0%")
 
-    const [minutes, seconds] = [parseInt(duration.slice(0, 2)),parseInt(duration.slice(4, 6))]
-    const duratioNumberTotalMinutes = minutes*60+seconds/60
+    // const [minutes, seconds] = [parseInt(duration.slice(0, 2)),parseInt(duration.slice(4, 6))]
+    // const duratioNumberTotalMinutes = minutes*60+seconds/60
 
     const audioElement = useRef(null)
 
@@ -70,22 +85,20 @@ const Musica = () => {
         }
     }, [id])
 
-    const timeUpdate = () => {
-        if(audioElement.current && progress.current) {
-            const actualTime = audioElement.current.currentTime;
-            setPercent(`${(actualTime/duratioNumberTotalMinutes)*100}%`)
-        }
-    }
-
     useEffect(() => {
-        const actualTime = audioElement.current.currentTime;
-        const minutos = Math.floor(actualTime/60)
-        const segundos = Math.floor(actualTime%60)
+        const intervalId = setInterval(() => {
+            if(!isPause) {
+                const currentTime = audioElement.current.currentTime
+                setTimeStamp(minutesToFormat(currentTime))
+                const percent = currentTime/formatToSeconds(duration)
+                progress.current.style.setProperty("--_progress", `${percent}%`)
+            }
+        }, 1000)
 
-        setTimeStamp(`${minutos.toString().padStart(2, 0)}:${segundos.toString().padStart(2, 0)}`)
-        
-        progress.current.style.setProperty("--_progress", percent)
-    }, [percent])
+        return () => {
+            clearInterval(intervalId)
+        }
+    }, [isPause])
 
     return (
         <>
@@ -125,7 +138,7 @@ const Musica = () => {
                         <p>{artist}</p>
                     </div>
                 </section>
-                <audio src={audio} ref={audioElement} onTimeUpdate={timeUpdate}></audio>
+                <audio src={audio} ref={audioElement}></audio>
             </main>
         </>
     )
