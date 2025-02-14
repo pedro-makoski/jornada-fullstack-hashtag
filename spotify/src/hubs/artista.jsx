@@ -21,9 +21,11 @@ const MusicShowInline = ({cont, img, name, time, id}) => {
             <article>
                 <Link to={`/songs/${id}`}>
                     <div className="main__ol__li__img-place">
-                        <p>{cont}</p>
-                        <img src={img} alt={`Imagem da musica ${name}`}/>
-                        <h4>{name}</h4>
+                        <p className="main__ol__li__img-place__cont">{cont}</p>
+                        <div className="main__ol__li__img-place__img">
+                            <img src={img} alt={`Imagem da musica ${name}`}/>
+                            <h4>{name}</h4>
+                        </div>
                     </div>
                     <div>
                         <p>{time}</p>

@@ -35,15 +35,14 @@
 
 .items__item .fa-play {
     position: absolute;
-    bottom: -100px;
+    bottom: -20px;
     opacity: 0;
     right: 20px;
 
-    background-color: var(--green-500);
-    padding: 10px;
+    color: var(--green-500);
     border-radius: 100%;
-    width: 2rem;
-    height: 2rem;
+
+    font-size: 3em;
 
     transition: .2s;
 }

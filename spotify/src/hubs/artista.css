@@ -57,6 +57,10 @@
     background-color: var(--green-800);
 }
 
+.main__ol li article {
+    width: 100%;
+}
+
 .main__ol li article a {
     display: flex;
     flex-direction: row;
@@ -70,10 +74,26 @@
 .main__ol__li__img-place  {
     flex-grow: 1;
     min-width: 0;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.main__ol__li__img-place__cont {
+    min-width: 0;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.main__ol__li__img-place__img {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    justify-content: space-between;
+    flex-grow: 1;
+    min-width: 0;
 }
 
 .main__ol__li__img-place img {

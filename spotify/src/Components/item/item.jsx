@@ -2,7 +2,7 @@ import React from "react";
 import "./item.css"
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 
 export function ElementArtistOrSong({imgPath, title, route, subtitle, whatIs, borderRadiusImg, subtitleStandart}) {
     return (
@@ -11,7 +11,7 @@ export function ElementArtistOrSong({imgPath, title, route, subtitle, whatIs, bo
                 <div className="items__item__img">
                     <img src={imgPath} alt={`$Imagem do(a) ${whatIs} ${title}`} style={{borderRadius: borderRadiusImg}}/>
                     <div>
-                        <FontAwesomeIcon icon={faPlay} className="fa-play"/>
+                        <FontAwesomeIcon icon={faCirclePlay} className="fa-play"/>
                     </div>
                 </div>  
                 <div className="item__titles">
