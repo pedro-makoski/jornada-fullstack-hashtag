@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/artists' element={<SeeMore  whatIsConjunct={"artists"} whatIsSingular={"artista"} borderRadiusImg={"100%"} list={artistArray} title={"artistas populares"} subtitleStandart={"Artista"}/>} />
-        <Route path='/musics' element={<SeeMore  whatIsConjunct={"songs"} whatIsSingular={"musica"} borderRadiusImg={"15px"} list={songsArray} title={"Musicas populares"}/>}/>
+        <Route path='/songs' element={<SeeMore  whatIsConjunct={"songs"} whatIsSingular={"musica"} borderRadiusImg={"15px"} list={songsArray} title={"Musicas populares"}/>}/>
         <Route path="/artists/:id" element={<ArtistaPage />}/>
         <Route path="/songs/:id" element={<Musica />}/>
       </Routes>

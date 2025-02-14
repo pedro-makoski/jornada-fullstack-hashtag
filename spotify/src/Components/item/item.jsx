@@ -24,16 +24,16 @@ export function ElementArtistOrSong({imgPath, title, route, subtitle, whatIs, bo
 }
 
 export function MultipleItens({list, whatIsConjunct, whatIsSingular, sliceQuantList, borderRadiusImg, subtitleStandart}) {
-    let newList = list
+    let newList = [...Array.from(list)]
 
     if(sliceQuantList != 0) {
-        newList = list.slice(0, sliceQuantList)
+        newList = Array.from(list).slice(0, sliceQuantList)
     }
 
     return (
         <section className="items">
             {newList.map((element) => (
-                <ElementArtistOrSong imgPath={element.image} title={element.name} route={`/${whatIsConjunct}/${element.id}`} subtitle={element.artist} whatIs={whatIsSingular} key={element.id} borderRadiusImg={borderRadiusImg} subtitleStandart={subtitleStandart}/>
+                <ElementArtistOrSong imgPath={element.image} title={element.name} route={`/${whatIsConjunct}/${element._id}`} subtitle={element.artist} whatIs={whatIsSingular} key={element._id} borderRadiusImg={borderRadiusImg} subtitleStandart={subtitleStandart}/>
             ))}
         </section>
     )

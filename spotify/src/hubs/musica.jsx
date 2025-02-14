@@ -1,12 +1,12 @@
 import React, { act, useEffect, useRef, useState } from "react";
 
-import { searchValuesWithThisValue } from "../utils/searchInList";
-import { artistArray } from "../assets/database/artists";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlay, faBackwardStep, faForwardStep, faCirclePause, prefix} from '@fortawesome/free-solid-svg-icons'
 import './musica.css'
 import { Link, useParams } from "react-router-dom";
-import { songsArray } from "../assets/database/songs";
+import { fetchData } from "./artista";
+import { useQuery } from "@tanstack/react-query";
+import { URL } from "../assets/database/artists";
 
 const minutesToFormat = (minutes) => {
     const minutesAbs = Math.floor(minutes/60)
@@ -25,59 +25,104 @@ const formatToSeconds = (format) => {
 
 const Musica = () => {
     const { id } = useParams()
-    const { image, name, duration, artist, audio } = searchValuesWithThisValue(songsArray, parseInt(id), "id")[0]
-    const currentArtista = searchValuesWithThisValue(artistArray, artist, "name")
-    const musicsFromArtista = searchValuesWithThisValue(songsArray, artist, "artist")
-    const idArtista = currentArtista[0]["id"]
-    const imageArtista = currentArtista[0]["image"]
-    const [isPause, setIsPause] = useState(true)
-    const [timeStamp, setTimeStamp] = useState('00:00')
-    // const [percent, setPercent] = useState("0%")
 
-    // const [minutes, seconds] = [parseInt(duration.slice(0, 2)),parseInt(duration.slice(4, 6))]
-    // const duratioNumberTotalMinutes = minutes*60+seconds/60
+    const { data:song, error, isLoading } = useQuery({
+        queryKey: ["songs", id],
+        queryFn:fetchData(`${URL}/songs/${id}`),
+    })
 
-    const audioElement = useRef(null)
+    const { data:currentArtista, error:errorArtist, isLoading:isLoadingArtist } = useQuery({
+        queryKey: ["artists", id],
+        queryFn:fetchData(`${URL}/artistfromsong/${song?.name}`),
+        enabled:!!song, 
+    })
+
+    const idArtista = currentArtista?._id
+    const imageArtista = currentArtista?.image
+
+    if(isLoading) {
+        return (
+            <h1 className="carregando">Carregando</h1>
+        )
+    }
+
+    if(error) {
+        return (
+            <h1 className="carregando">Problema ao encontrar os elementos</h1>
+        )
+    }
+
+    if(isLoadingArtist) {
+        return (
+            <h1>Carregando...</h1>
+        )
+    }
+
+    if(errorArtist) {
+        return (
+            <h1 className="carregando">Problema ao encontrar os elementos</h1>
+        )
+    }
+
+    const { image, name, duration, artist, audio } = song 
+
+    return (
+        <>
+            <main className="main-music">
+                <section className="main-music--music">
+                    <img src={image} />
+                </section>
+                <section className="main-music__infos">
+                    <div className="main-music__infos__autor-for-image">
+                        <Link to={`/artists/${idArtista}`} className="main-music__infos__autor-for-image__link">
+                            <img src={imageArtista} className="main-music__infos__image-author"/>
+                        </Link>
+                    </div>
+                    <AudioPlayer audio={audio} duration={duration} id={id} name={name}/>
+                    <div className="main--music__autor-infos">
+                        <h2>{name}</h2>
+                        <p>{artist}</p>
+                    </div>
+                </section>
+            </main>
+        </>
+    )
+}
+
+const AudioPlayer = ({audio, duration, id, name}) => {
+    const {data:nextMusic, error:errorSongNext, isLoading:isLoadingSongNext} = useQuery({
+        queryKey: ["nextmusic", id],
+        queryFn:fetchData(`${URL}/nextmusic/${name}`)
+    });
+    const {data:beforeMusic, error:errorSongBefore, isLoading:isLoadingSongBefore} = useQuery({
+        queryKey: ["beforemusic",id],
+        queryFn:fetchData(`${URL}/beforemusic/${name}`),
+        enabled:!!nextMusic
+    });
 
     const togglePlay = () => {
-        let isPauseNew = !isPause
+        let isPauseNew = !isPause;
         if(isPauseNew) {
-            audioElement.current.pause()
+            audioElement.current.pause();
         } else {
-            audioElement.current.play()
+            audioElement.current.play();
         }
-        setIsPause(isPauseNew)
+        setIsPause(isPauseNew);
     }
 
-    const progress = useRef(null)
-
-    let nextMusic;
-    let beforeMusic; 
-    const idInt = Number(id)
-    const posOfActualMusica = musicsFromArtista.findIndex((element) => element.id === idInt)
-    if(posOfActualMusica === musicsFromArtista.length-1) {
-        nextMusic = idInt-musicsFromArtista.length+1
-    } else {
-        nextMusic = idInt+1
-    }
-
-    if(posOfActualMusica === 0) {
-        beforeMusic = idInt+musicsFromArtista.length-1
-    } else {
-        beforeMusic = idInt-1 
-    }
-    
-    nextMusic = `/songs/${nextMusic}`
-    beforeMusic = `/songs/${beforeMusic}`
+    const [isPause, setIsPause] = useState(true);
+    const [timeStamp, setTimeStamp] = useState('00:00');
+    const audioElement = useRef(null);
+    const progress = useRef(null);
 
     useEffect(() => {
         setIsPause(true)
         if(audioElement.current) {
-            audioElement.current.pause()
-            audioElement.current.currentTime = 0
-            progress.current.style.setProperty("--_progress", `0%`)
-            setTimeStamp("00:00")
-        }
+            audioElement.current.pause();
+            audioElement.current.currentTime = 0;
+            progress.current.style.setProperty("--_progress", `0%`);
+            setTimeStamp("00:00");
+        };
 
         return () => {
             if(audioElement.current) {
@@ -94,7 +139,6 @@ const Musica = () => {
                 setTimeStamp(minutesToFormat(currentTime))
                 const percent = currentTime/formatToSeconds(duration)
                 progress.current.style.setProperty("--_progress", `${percent}%`)
-                console.log(timeStamp)
             }
         }, 1000)
 
@@ -103,47 +147,53 @@ const Musica = () => {
         }
     }, [isPause])
 
+    if(errorSongNext) {
+        return (
+            <h1 className="carregando">Problema ao encontrar os elementos</h1>
+        );
+    }
+
+    if(isLoadingSongNext) {
+        return (
+            <h1>Carregando...</h1>
+        );;
+    }
+
+    if(errorSongBefore) {
+        return (
+            <h1 className="carregando">Problema ao encontrar os elementos</h1>
+        );
+    }
+
+    if(isLoadingSongBefore) {
+        return (
+            <h1>Carregando...</h1>
+        );
+    }
+
     return (
-        <>
-            <main className="main-music">
-                <section className="main-music--music">
-                    <img src={image} />
-                </section>
-                <section className="main-music__infos">
-                    <div className="main-music__infos__autor-for-image">
-                        <Link to={`/artists/${idArtista}`} className="main-music__infos__autor-for-image__link">
-                            <img src={imageArtista} className="main-music__infos__image-author"/>
-                        </Link>
-                    </div>
-                    <div className="main-music__infos__time">
-                        <div className="main-music__infos__buttons">
-                            <Link className="button-control" to={beforeMusic}>
-                                <FontAwesomeIcon icon={faBackwardStep} className="fa"/>
-                            </Link>
-                            <button className="button-control" onClick={togglePlay}> 
-                                <FontAwesomeIcon icon={isPause ? faCirclePlay : faCirclePause} className="fa"/>
-                            </button>
-                            <Link className="button-control" to={nextMusic}>
-                                <FontAwesomeIcon icon={faForwardStep} className="fa"/>
-                            </Link>
-                        </div>
-                        <div className="main--music__infos-time-view">
-                            <p>{timeStamp}</p>
-                            <div className="progress-place">
-                                <span className="progress-place__total"></span>
-                                <span className="progress-place__progress" ref={progress}></span>
-                            </div>
-                            <p>{duration}</p>
-                        </div>
-                    </div>
-                    <div className="main--music__autor-infos">
-                        <h2>{name}</h2>
-                        <p>{artist}</p>
-                    </div>
-                </section>
-                <audio src={audio} ref={audioElement}></audio>
-            </main>
-        </>
+        <div className="main-music__infos__time">
+            <div className="main-music__infos__buttons">
+                <Link className="button-control" to={`/songs/${beforeMusic?._id}`}>
+                    <FontAwesomeIcon icon={faBackwardStep} className="fa"/>
+                </Link>
+                <button className="button-control" onClick={togglePlay}> 
+                    <FontAwesomeIcon icon={isPause ? faCirclePlay : faCirclePause} className="fa"/>
+                </button>
+                <Link className="button-control" to={`/songs/${nextMusic?._id}`}>
+                    <FontAwesomeIcon icon={faForwardStep} className="fa"/>
+                </Link>
+            </div>
+            <div className="main--music__infos-time-view">
+                <p>{timeStamp}</p>
+                <div className="progress-place">
+                    <span className="progress-place__total"></span>
+                    <span className="progress-place__progress" ref={progress}></span>
+                </div>
+                <p>{duration}</p>
+            </div>
+            <audio src={audio} ref={audioElement}></audio>
+        </div>
     )
 }
 
