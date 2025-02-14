@@ -75,6 +75,8 @@ const Musica = () => {
         if(audioElement.current) {
             audioElement.current.pause()
             audioElement.current.currentTime = 0
+            progress.current.style.setProperty("--_progress", `0%`)
+            setTimeStamp("00:00")
         }
 
         return () => {
