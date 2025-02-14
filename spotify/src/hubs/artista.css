@@ -12,6 +12,7 @@
     background-size: cover;
     padding: 30px;
     position: relative;
+    max-width: 100vw;
 }
 
 .main__header::before {
@@ -34,6 +35,7 @@
 
 .mainArsta__musics {
     padding: 10px;
+    max-width: calc(100vw - 10px - 10px);
 }
 
 .mainArsta__musics h3 {
@@ -64,11 +66,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 10px;
     align-items: center;
     width: 100%;
 }
 
 .main__ol__li__img-place  {
+    flex-grow: 1;
+    min-width: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -77,6 +82,13 @@
 
 .main__ol__li__img-place img {
     width: 40px;
+}
+
+.main__ol li article h4 {
+    max-width: 100%;
+    word-wrap: break-word;
+    min-width: 0;
+    flex-grow: 1;
 }
 
 .main__ol__see-more {
