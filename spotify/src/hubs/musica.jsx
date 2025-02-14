@@ -9,14 +9,14 @@ import { Link, useParams } from "react-router-dom";
 import { songsArray } from "../assets/database/songs";
 
 const minutesToFormat = (minutes) => {
-    const minutesAbs = Math.Floor(minutes/60)
+    const minutesAbs = Math.floor(minutes/60)
     const seconds = Math.floor(minutes % 60)
 
     return `${minutesAbs.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
 }
 
 const formatToSeconds = (format) => {
-    const [minutes, seconds] = format.toString.split(":")
+    const [minutes, seconds] = format.toString().split(":")
     const minutesInt = Number(minutes)
     const secondsInt = Number(seconds)
 
@@ -92,6 +92,7 @@ const Musica = () => {
                 setTimeStamp(minutesToFormat(currentTime))
                 const percent = currentTime/formatToSeconds(duration)
                 progress.current.style.setProperty("--_progress", `${percent}%`)
+                console.log(timeStamp)
             }
         }, 1000)
 
