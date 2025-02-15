@@ -98,7 +98,7 @@ export const ArtistaPage = () => {
 
     if(songsQuery.isLoading) {
         return (
-            <h1 className="carregando">Carregando</h1>
+            <h1 className="carregando">Carregando....</h1>
         )
     }
 
@@ -119,7 +119,7 @@ export const ArtistaPage = () => {
                     <h3>Populares</h3>
                     <MusicsShowInLineList listMusics={correspondents} correspondents={correspondents}/>
                 </div>
-                <Link to={`/songs/${correspondents._id}`}>
+                <Link to={`/songs/${correspondents[0]._id}`}>
                     <div className="fa-artist">
                         <FontAwesomeIcon icon={faCirclePlay} />
                     </div>
