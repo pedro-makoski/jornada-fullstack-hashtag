@@ -1,7 +1,10 @@
-import express from "express"
+import express, { response } from "express"
 import cors from "cors"
 
 import {getCollection, getCollectionById, getCollectionByProperty, getColect, getColectionByElementModule} from "../connect/connect.js"
+import path from "path";
+
+const __dirname = path.resolve();
 
 const PORT = 3000 
 const ID_PLACE = "_id"
@@ -9,14 +12,14 @@ const ID_PLACE = "_id"
 const app = express()
 app.use(cors())
 
-app.get("/artists", await getCollection("artists"))
-app.get("/songs", await getCollection("songs"))
+app.get("/api/artists", await getCollection("artists"))
+app.get("/api/songs", await getCollection("songs"))
 
-app.get("/artists/:id", await getCollectionById("artists", ID_PLACE))
-app.get("/songs/:id", await getCollectionById("songs", ID_PLACE))
+app.get("/api/artists/:id", await getCollectionById("artists", ID_PLACE))
+app.get("/api/songs/:id", await getCollectionById("songs", ID_PLACE))
 
-app.get("/songsfromartist/:property", await getCollectionByProperty("songs", "artist"))
-app.get("/artistfromsong/:song", async(req, res) => {
+app.get("/api/songsfromartist/:property", await getCollectionByProperty("songs", "artist"))
+app.get("/api/artistfromsong/:song", async(req, res) => {
     try {
         const song = req.params.song
         const songs = await getColect("songs")
@@ -33,7 +36,7 @@ app.get("/artistfromsong/:song", async(req, res) => {
         res.send("Problemas ao achar o elemento")
     }
 })  
-app.get("/nextmusic/:song", async(req, res) => {
+app.get("/api/nextmusic/:song", async(req, res) => {
     try {
         const id = req.params.song
         const songs = await getColect("songs")
@@ -59,7 +62,7 @@ app.get("/nextmusic/:song", async(req, res) => {
     }
 })
 
-app.get("/beforemusic/:song", async(req, res) => {
+app.get("/api/beforemusic/:song", async(req, res) => {
     try {
         const id = req.params.song
         const songs = await getColect("songs")
@@ -86,6 +89,11 @@ app.get("/beforemusic/:song", async(req, res) => {
         res.status(404)
         res.send("Problema em encontrar o elemento")
     }
+})
+
+app.use(express.static(path.join(__dirname, "../front-end/dist")))
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../front-end/dist/index.html"))
 })
 
 app.listen(PORT, () => {

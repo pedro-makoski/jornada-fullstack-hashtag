@@ -1,5 +1,13 @@
 {
-  "dependencies": {
-    "mongodb": "^6.13.0"
-  }
+  "name": "jornada-fullstack-hashtag",
+  "version": "1.0.0",
+  "description": "Jornada Fullstack Hashtag",
+  "main": "index.js",
+  "scripts": {
+    "build":"npm install --prefix spotify-server && npm install --prefix spotify && npm run build --prefix spotify",
+    "start": "npm run start --prefix spotify-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

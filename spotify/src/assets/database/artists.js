@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-export const URL = "http://localhost:3000"
+const NODE_ENV = process.env.NODE_ENV
+export const URL = NODE_ENV === "development" ? "http://localhost:3000/api" : "/api"
 
 const artistArrayRaw = await axios.get(`${URL}/artists`);
 export const artistArray = artistArrayRaw.data
