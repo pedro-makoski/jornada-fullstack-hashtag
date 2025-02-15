@@ -167,7 +167,7 @@ const AudioPlayer = ({audio, duration, id, name}) => {
 
     if(isLoadingSongBefore) {
         return (
-            <h1>Carregando...</h1>
+            <h1 className="carregando">Carregando...</h1>
         );
     }
 
