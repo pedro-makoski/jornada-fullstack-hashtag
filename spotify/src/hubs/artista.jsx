@@ -86,7 +86,7 @@ export const ArtistaPage = () => {
 
     if(isLoading) {
         return (
-            <h1 className="carregando">Carregando</h1>
+            <h1 className="carregando">Carregando...</h1>
         )
     }
 
