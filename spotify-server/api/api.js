@@ -91,9 +91,9 @@ app.get("/api/beforemusic/:song", async(req, res) => {
     }
 })
 
-app.use(express.static(path.join(__dirname, "../front-end/dist")))
+app.use(express.static(path.join(__dirname, "../spotify/dist")))
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../front-end/dist/index.html"))
+    res.sendFile(path.join(__dirname, "../spotify/dist/index.html"))
 })
 
 app.listen(PORT, () => {
